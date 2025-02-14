@@ -16,7 +16,7 @@ def makeEquiDepthBin(data : list,numOfBin : int) -> list[list]:
 def makeEquiWidthBin(data : list,numOfBin : int) -> list[list]:
     
     dataRange = max(data) - min(data)
-    width = dataRange / numOfBin
+    width = dataRange // numOfBin
     bins = [[] for _ in range(numOfBin)]
     edges = []
     for i in range (numOfBin+1):
@@ -27,7 +27,7 @@ def makeEquiWidthBin(data : list,numOfBin : int) -> list[list]:
                 bins[j].append(value)
                 break
         if (value == edges[-1]):
-                bins[-1].append(value)
+            bins[-1].append(value)
     return bins 
             
 
